@@ -4,7 +4,6 @@
 
 <?php 
 $hot_keywords = DB::table('recent_keywords')->select('keywords',DB::raw("COUNT(*)"))->groupby('keywords')->orderby(DB::raw("COUNT(*)"),'desc')->paginate(5);
-
 if (isset($_GET['search_bool'])){
     $search_bool=$_GET['search_bool'];
 }else{
@@ -81,13 +80,20 @@ if ($search_bool!=0){
             </tbody>
         </table>
     <p style="font-size:32px">商品資料分析圖</p>
-    {!! $chart->container() !!}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    {!! $chart->script() !!}
-    
+    <?php 
+        $label_array = array();
+        $price_array = array();
+        foreach($datalists as $datalist){
+            $label_array[] = $datalist->main_keyword;
+            $price_array[] = $datalist->price;
+        }
+        $chart->labels($label_array);//商品種類陣列
+        $chart->dataset('Price', 'bar', $price_array)->backgroundColor('#C7D6EA');//商品價格陣列
+    ?>
+    <div>
+        {!! $chart->container() !!}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        {!! $chart->script() !!}
+    </div>
 </div>
 @endsection
-{{-- SELECT keywords, COUNT(*)
-FROM recent_keywords
-GROUP BY keywords
-ORDER BY COUNT(*) DESC --}}
