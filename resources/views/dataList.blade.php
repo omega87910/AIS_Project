@@ -4,35 +4,30 @@
 
 <?php 
 $hot_keywords = DB::table('recent_keywords')->select('keywords',DB::raw("COUNT(*)"))->groupby('keywords')->orderby(DB::raw("COUNT(*)"),'desc')->paginate(5);
-if (isset($_GET['search_bool'])){
-    $search_bool=$_GET['search_bool'];
-}else{
-    $search_bool=0;
-}
-if ($search_bool!=0){
-    if (isset($_GET['keyword_input'])){
-        $keyword = $_GET['keyword_input'];
+if (isset($_GET['search_keyword'])){
+    $keyword = $_GET['search_keyword'];
+    if ($keyword!=""){
         DB::table('recent_keywords')->Insert(
             ['keywords' => $keyword]
         );
         $datalists = DB::table('data_list')->where('main_keyword','LIKE',"%$keyword%")->get();
     }else{
-        echo "keyword is empty";
+        echo 'keyword is empty';
     }
 }
 ?>
 <div style="padding:0% 25% 0% 25%">
-    <form align="left">
+        <div style="text-align:left">
         <p>關鍵字</p>
-        <input name="keyword_input" style="width:100%" type="text" id="inp" value="<?php if (!empty($_GET['keyword_select'])){echo $_GET['keyword_select'] ;}?>">
+        <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
         <p>熱門關鍵字</p>
         @foreach ($hot_keywords as $hot_keyword)
-            <button name="keyword_select" value="{{$hot_keyword->keywords}}">{{$hot_keyword->keywords}}</button>
+            <button onclick="document.getElementById('keyword_input').value='{{$hot_keyword->keywords}}'">{{$hot_keyword->keywords}}</button>
         @endforeach
-        <br>
-        <br>
-        <button style="height:40px" name="search_bool" value="1">商品明細資訊查詢</button>
-    </form>
+        <form>
+            <button style="height:40px" name="search_keyword" id="search_keyword" onclick="document.getElementById('search_keyword').value=document.getElementById('keyword_input').value">商品明細資訊查詢</button>
+        </form>
+        </div>
     <p style="font-size:32px">商品明細資訊查詢</p>
 
     
