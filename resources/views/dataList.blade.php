@@ -81,6 +81,9 @@ if ($search_bool!=0){
             </tbody>
         </table>
     <p style="font-size:32px">商品資料分析圖</p>
+    {!! $chart->container() !!}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    {!! $chart->script() !!}
     
 </div>
 @endsection
