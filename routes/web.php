@@ -22,6 +22,7 @@ Route::get('/dataImport', function () {
     return view('dataImport');
 });
 
+Route::get('/dataManage', 'DataManageController@getIndex');
 
 Route::get('dataList','DataListController@getIndex');
 

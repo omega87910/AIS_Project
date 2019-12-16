@@ -179,7 +179,7 @@
                     <a href="{{'dataList'}}">資料處理作業</a>
                     <a href="#">大數據資料分析</a>
                     <a href="#">產業分析智慧儀表板</a>
-                    <a href="#">後台管理系統</a>
+                    <a href="{{'dataManage'}}">後台管理系統</a>
                 </div>
                 
                 <div>
