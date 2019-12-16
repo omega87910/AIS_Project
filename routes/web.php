@@ -21,7 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dataImport', function () {
     return view('dataImport');
 });
-
+Route::get('/dataAnalysis', function () {
+    return view('dataAnalysis');
+});
+Route::get('/dataDashboard', function () {
+    return view('dataDashboard');
+});
 Route::get('/dataManage', 'DataManageController@getIndex');
 
 Route::get('dataList','DataListController@getIndex');

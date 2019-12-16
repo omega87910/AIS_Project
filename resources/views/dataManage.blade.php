@@ -17,6 +17,7 @@ if (isset($_GET['search_keyword'])){
 }
 ?>
 <div style="padding:0% 25% 0% 25%">
+    <p style="font-size:32px">商品後台管理系統</p>
         <div style="text-align:left">
         <p>關鍵字</p>
         <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
@@ -28,9 +29,6 @@ if (isset($_GET['search_keyword'])){
             <button style="height:40px" name="search_keyword" id="search_keyword" onclick="document.getElementById('search_keyword').value=document.getElementById('keyword_input').value">商品明細資訊查詢</button>
         </form>
         </div>
-    <p style="font-size:32px">商品後台管理系統</p>
-
-    
     <table class="paleBlueRows" style="width:100%">
         <thead>
             <tr>
