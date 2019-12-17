@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <title>德成皮革股份有限公司(day 7)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link href="{{ asset('css/all.css') }}" type="text/css" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -148,7 +148,13 @@
         {
             background: #F5FAFA;
         }
-
+        .mytable{
+            color: #636b6f;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+        }
         </style>
     </head>
     <body>

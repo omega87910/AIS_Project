@@ -7,8 +7,7 @@ use App\Charts\SampleChart;
 class DataListController extends Controller{
     public static function getIndex(){
         $chart = new SampleChart;
-        $datalists =DataList::sortable()->paginate(20);
-        return view('dataList',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)],compact('chart'),compact('datalists'));
+        return view('dataList',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)],compact('chart'));
     }
 }
 ?>
