@@ -60,9 +60,9 @@ if (isset($_GET['search_keyword'])){
     <table class="paleBlueRows" style="width:100%">
             <thead>
                 <tr>
-                    <th>主要關鍵字</th>
-                    <th>次要關鍵字</th>
-                    <th>平均價格</th>
+                    <th>主要關鍵字@sortablelink('main_keyword','Title', ['parameter' => 'smile'],  ['rel' => 'nofollow'])</th>
+                    <th>次要關鍵字@sortablelink('second_keyword')</th>
+                    <th>平均價格@sortablelink('price')</th>
                 </tr>
             </thead>
             <tbody>
