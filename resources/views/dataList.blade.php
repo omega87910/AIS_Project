@@ -35,11 +35,11 @@ if (isset($_GET['search_keyword'])){
     <table class="paleBlueRows" style="width:100%">
         <thead>
             <tr>
-                <th>主要關鍵字</th>
-                <th>顏色</th>
-                <th>部位</th>
-                <th>厚度</th>
-                <th>大小</th>
+                <th>@sortablelink('main_keyword','主要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('color','顏色',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('part','部位',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('thickness','厚度',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
             </tr>
         </thead>
         <tbody>

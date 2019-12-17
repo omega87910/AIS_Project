@@ -150,10 +150,10 @@
         }
         .mytable{
             color: #636b6f;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
         }
         </style>
     </head>
@@ -162,9 +162,9 @@
             @if (Route::has('login')) <!-- 如果登入了 -->
                 <div class="top-right links">
                     @auth <!-- 驗證成功 -->
-                        <a>使用者名稱：{{ Auth::user()->name }}</a>
+                        <a class="fa fa-user">使用者名稱：{{ Auth::user()->name }}</a>
                         {{-- <a href="{{ url('/home') }}">Home</a> --}}
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <a class="dropdown-item fa fa-sign-out-alt" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
                     @else <!-- 驗證失敗 -->
                         <a href="{{ route('login') }}">{{ __('Login') }}</a>
