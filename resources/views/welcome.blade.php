@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>德成皮革股份有限公司(day 7)</title>
+        <title>德成皮革股份有限公司(day 7.5)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -167,9 +167,9 @@
                         <a class="dropdown-item fa fa-sign-out-alt" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
                     @else <!-- 驗證失敗 -->
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="fa fa-sign-in-alt" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="fa fa-user-plus" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @endauth
                 </div>

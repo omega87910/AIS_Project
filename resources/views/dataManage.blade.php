@@ -18,35 +18,45 @@ if (isset($_GET['search_keyword'])){
 ?>
 <div style="padding:0% 25% 0% 25%">
     <p style="font-size:32px">商品後台管理系統</p>
-        <div style="text-align:left">
+    <div style="text-align:left">
         <p>關鍵字</p>
         <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
         <p>熱門關鍵字</p>
         @foreach ($hot_keywords as $hot_keyword)
-            <button onclick="document.getElementById('keyword_input').value='{{$hot_keyword->keywords}}'">{{$hot_keyword->keywords}}</button>
+            <button style="font-size:12px" onclick="document.getElementById('keyword_input').value='{{$hot_keyword->keywords}}'">{{$hot_keyword->keywords}}</button>
         @endforeach
         <form>
             <button style="height:40px" name="search_keyword" id="search_keyword" onclick="document.getElementById('search_keyword').value=document.getElementById('keyword_input').value">商品明細資訊查詢</button>
         </form>
-        </div>
+    </div>
     <table class="paleBlueRows" style="width:100%">
         <thead>
             <tr>
-                <th>主要關鍵字</th>
-                <th>顏色</th>
-                <th>部位</th>
-                <th>厚度</th>
-                <th>大小</th>
+                <th>@sortablelink('main_keyword','主要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('second_keyword','次要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('product_description','產品說明',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('price','價格',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('color','顏色',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('part','部位',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('thickness','厚度',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('instruction_for_use','使用方法',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>@sortablelink('instruction_for_others','其他說明',[],['class' => 'mytable','rel' => 'nofollow'])</th>
             </tr>
         </thead>
         <tbody>
             @foreach($datalists as $datalist)
             <tr>
                 <td>{{$datalist->main_keyword}}</td>
+                <td>{{$datalist->second_keyword}}</td>
+                <td>{{$datalist->product_description}}</td>
+                <td>{{$datalist->price}}</td>
                 <td>{{$datalist->color}}</td>
                 <td>{{$datalist->part}}</td>
                 <td>{{$datalist->thickness}}</td>
                 <td>{{$datalist->size}}</td>
+                <td>{{$datalist->instruction_for_use}}</td>
+                <td>{{$datalist->instruction_for_others}}</td>
             </tr>
             @endforeach
         </tbody>
