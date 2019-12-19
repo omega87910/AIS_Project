@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\DB;
 use App\DataList;
 use App\KeyWord;
 use App\Charts\SampleChart;
-class DataManageController extends Controller{
+class DataHandleController extends Controller{
     public static function getIndex(){
         $chart = new SampleChart;
-        DataManageController::update();
-        DataManageController::delete();
-        return view('dataManage',['datalists'=>DataList::sortable()->paginate(5),'hot_keywords'=>KeyWord::paginate(15)],compact('chart'));
+        DataHandleController::update();
+        DataHandleController::delete();
+        return view('dataHandle',['datalists'=>DataList::sortable()->paginate(5),'hot_keywords'=>KeyWord::paginate(15)],compact('chart'));
     }
     public static function update(){
         if (isset($_GET['modify'])){

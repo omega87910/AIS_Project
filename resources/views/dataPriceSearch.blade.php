@@ -1,7 +1,6 @@
 @extends('welcome')
 
 @section('MainArea')
-
 <?php 
 $hot_keywords = DB::table('recent_keywords')->select('keywords',DB::raw("COUNT(*)"))->groupby('keywords')->orderby(DB::raw("COUNT(*)"),'desc')->paginate(10);
 if (isset($_GET['search_keyword'])){
@@ -17,8 +16,8 @@ if (isset($_GET['search_keyword'])){
 }
 ?>
 <div style="padding:0% 25% 0% 25%">
-    <p style="font-size:32px">資料處理作業</p>
-        <div style="text-align:left">
+    <p style="font-size:32px">商品價格查詢</p>
+    <div style="text-align:left">
         <p>關鍵字</p>
         <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
         <p>熱門關鍵字</p>
@@ -28,35 +27,7 @@ if (isset($_GET['search_keyword'])){
         <form>
             <button style="height:40px" name="search_keyword" id="search_keyword" onclick="document.getElementById('search_keyword').value=document.getElementById('keyword_input').value">商品明細資訊查詢</button>
         </form>
-        </div>
-    <p style="font-size:32px">商品明細資訊查詢</p>
-
-    
-    <table class="paleBlueRows" style="width:100%">
-        <thead>
-            <tr>
-                <th>@sortablelink('main_keyword','主要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-                <th>@sortablelink('color','顏色',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-                <th>@sortablelink('part','部位',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-                <th>@sortablelink('thickness','厚度',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-                <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($datalists as $datalist)
-            <tr>
-                <td>{{$datalist->main_keyword}}</td>
-                <td>{{$datalist->color}}</td>
-                <td>{{$datalist->part}}</td>
-                <td>{{$datalist->thickness}}</td>
-                <td>{{$datalist->size}}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    
-
-    <p style="font-size:32px">商品平均價格查詢</p>
+    </div>
     <table class="paleBlueRows" style="width:100%">
             <thead>
                 <tr>
@@ -75,21 +46,5 @@ if (isset($_GET['search_keyword'])){
                 @endforeach
             </tbody>
         </table>
-    <p style="font-size:32px">商品資料分析圖</p>
-    <?php 
-        $label_array = array();
-        $price_array = array();
-        foreach($datalists as $datalist){
-            $label_array[] = $datalist->main_keyword;
-            $price_array[] = $datalist->price;
-        }
-        $chart->labels($label_array);//商品種類陣列
-        $chart->dataset('Price', 'bar', $price_array)->backgroundColor('#C7D6EA');//商品價格陣列
-    ?>
-    <div>
-        {!! $chart->container() !!}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        {!! $chart->script() !!}
-    </div>
 </div>
 @endsection

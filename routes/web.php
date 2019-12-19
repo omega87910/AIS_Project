@@ -18,16 +18,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/dataImport', function () {
+Route::get('/dataImport', function () {//資料匯入
     return view('dataImport');
 });
-Route::get('/dataAnalysis', function () {
-    return view('dataAnalysis');
-});
+Route::get('/bigDataAnalysis', 'DataListController@toBigDataAnalysis');
 Route::get('/dataDashboard', function () {
     return view('dataDashboard');
 });
-Route::get('/dataManage', 'DataManageController@getIndex');
-
-Route::get('dataList','DataListController@getIndex');
+Route::get('/dataManage', 'DataListController@toDataManage');//後台管理系統
+Route::get('dataHandle','DataListController@toDataHandle');//資料處理作業
+Route::get('dataListSearch','DataListController@toDataListSearch');//商品明細資訊查詢
+Route::get('dataPriceSearch','DataListController@toDataPriceSearch');
+Route::get('dataAnalysisChart','DataListController@toDataAnalysisChart');
 
