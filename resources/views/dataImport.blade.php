@@ -1,6 +1,9 @@
 @extends('welcome')
 
 @section('MainArea')
+<?php
+    $shop_list=DB::table('shop_list')->select('shop')->get();
+?>
 <div style="padding:0% 25% 0% 25%">
     <p style="font-size:32px">資料匯入</p>
     <div align="left">
@@ -22,9 +25,9 @@
             </label>
             <br>
             <select style="width:100%;font-size:20px">
-                <option value="0">pchome</option>
-                <option value="1">蝦皮</option>
-                <option value="2">露天</option>
+                @foreach ($shop_list as $shop)
+                    <option value={{$shop->shop}}>{{$shop->shop}}</option>
+                @endforeach
             </select>
         
             <br>

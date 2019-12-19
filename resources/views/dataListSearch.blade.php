@@ -2,7 +2,7 @@
 
 @section('MainArea')
 <?php 
-$hot_keywords = DB::table('recent_keywords')->select('keywords',DB::raw("COUNT(*)"))->groupby('keywords')->orderby(DB::raw("COUNT(*)"),'desc')->paginate(10);
+// $hot_keywords = DB::table('recent_keywords')->select('keywords',DB::raw("COUNT(*)"))->groupby('keywords')->orderby(DB::raw("COUNT(*)"),'desc')->paginate(10);
 if (isset($_GET['search_keyword'])){
     $keyword = $_GET['search_keyword'];
     if ($keyword!=""){

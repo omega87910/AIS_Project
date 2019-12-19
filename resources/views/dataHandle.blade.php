@@ -49,20 +49,20 @@ if (isset($_GET['search_keyword'])){
             @foreach($datalists as $datalist)
             <tr>
                 <form>
-                <td><input name="new_main_keyword" value={{$datalist->main_keyword}}></td>
-                <td><input name="new_second_keyword" value={{$datalist->second_keyword}}></td>
-                <td><input name="new_product_description" value={{$datalist->product_description}}></td>
-                <td><input name="new_price" value={{$datalist->price}}></td>
-                <td><input name="new_color" value={{$datalist->color}}></td>
-                <td><input name="new_part" value={{$datalist->part}}></td>
-                <td><input name="new_thickness" value={{$datalist->thickness}}></td>
-                <td><input name="new_size" value={{$datalist->size}}></td>
-                <td><input name="new_instruction_for_use" value={{$datalist->instruction_for_use}}></td>
-                <td><input name="new_instruction_for_others" value={{$datalist->instruction_for_others}}></td>
-                <td>
-                    <button name="modify" value="{{$datalist->id}}">修改</button>
-                    <button name="delete" value="{{$datalist->id}}">刪除</button>
-                </td>
+                    <td><input style="width:60px" name="new_main_keyword" value={{$datalist->main_keyword}}></td>
+                    <td><input style="width:60px" name="new_second_keyword" value={{$datalist->second_keyword}}></td>
+                    <td><input style="width:60px" name="new_product_description" value={{$datalist->product_description}}></td>
+                    <td><input style="width:60px" name="new_price" value={{$datalist->price}}></td>
+                    <td><input style="width:60px" name="new_color" value={{$datalist->color}}></td>
+                    <td><input style="width:60px" name="new_part" value={{$datalist->part}}></td>
+                    <td><input style="width:60px" name="new_thickness" value={{$datalist->thickness}}></td>
+                    <td><input style="width:60px" name="new_size" value={{$datalist->size}}></td>
+                    <td><input style="width:60px" name="new_instruction_for_use" value={{$datalist->instruction_for_use}}></td>
+                    <td><input style="width:60px" name="new_instruction_for_others" value={{$datalist->instruction_for_others}}></td>
+                    <td>
+                        <button name="modify" value="{{$datalist->id}}">修改</button>
+                        <button name="delete" value="{{$datalist->id}}">刪除</button>
+                    </td>
                 </form>
             </tr>
             @endforeach

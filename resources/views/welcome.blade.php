@@ -91,7 +91,7 @@
             }
             input{
                 -webkit-appearance: none;
-                /* width: 100%; */
+                /* width: 10%; */
                 border: 0;
                 font-family: inherit;
                 /* padding: 12px 0; */
