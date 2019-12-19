@@ -45,13 +45,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 64px;
             }
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
+                padding: 0 10px;
+                font-size: 18px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -91,7 +91,7 @@
             }
             input{
                 -webkit-appearance: none;
-                width: 100%;
+                /* width: 100%; */
                 border: 0;
                 font-family: inherit;
                 /* padding: 12px 0; */
@@ -177,7 +177,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    資料分析與處理系統
+                    <?php
+                        $titles = DB::table('title')->where('id','=','1')->get();
+                    ?>
+                    {{$titles[0]->title}}
                 </div>
 
                 <div class="links">

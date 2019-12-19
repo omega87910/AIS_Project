@@ -17,6 +17,17 @@ if (isset($_GET['search_keyword'])){
 ?>
 <div style="padding:0% 25% 0% 25%">
     <p style="font-size:32px">商品資料分析圖</p>
+    <div style="text-align:left">
+        <p>關鍵字</p>
+        <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
+        <p>熱門關鍵字</p>
+        @foreach ($hot_keywords as $hot_keyword)
+            <button onclick="document.getElementById('keyword_input').value='{{$hot_keyword->keywords}}'">{{$hot_keyword->keywords}}</button>
+        @endforeach
+        <form>
+            <button style="height:40px" name="search_keyword" id="search_keyword" onclick="document.getElementById('search_keyword').value=document.getElementById('keyword_input').value">商品明細資訊查詢</button>
+        </form>
+    </div>
     <?php 
         $label_array = array();
         $price_array = array();
