@@ -14,6 +14,13 @@ if (isset($_GET['search_keyword'])){
     }else{
         echo 'keyword is empty';
     }
+}else if(isset($_GET['delete'])){
+    $delete = $_GET['delete'];
+    echo $delete;
+    DB::delete("delete from data_list where id = ?",[$delete]);
+}else if (isset($_GET['modify'])){
+    $modify = $_GET['modify'];
+    echo $modify;
 }
 ?>
 <div style="padding:0% 25% 0% 25%">
@@ -42,6 +49,7 @@ if (isset($_GET['search_keyword'])){
                 <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
                 <th>@sortablelink('instruction_for_use','使用方法',[],['class' => 'mytable','rel' => 'nofollow'])</th>
                 <th>@sortablelink('instruction_for_others','其他說明',[],['class' => 'mytable','rel' => 'nofollow'])</th>
+                <th>功能</th>
             </tr>
         </thead>
         <tbody>
@@ -57,6 +65,12 @@ if (isset($_GET['search_keyword'])){
                 <td>{{$datalist->size}}</td>
                 <td>{{$datalist->instruction_for_use}}</td>
                 <td>{{$datalist->instruction_for_others}}</td>
+                <td>
+                    <form>
+                        <button name="modify" value="{{$datalist->id}}">修改</button>
+                        <button name="delete" value="{{$datalist->id}}">刪除</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>
