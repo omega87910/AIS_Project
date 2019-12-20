@@ -8,7 +8,7 @@
 <div style="padding:0% 25% 0% 25%">
     <p style="font-size:32px">後台管理系統</p>
     <div>
-        <form>
+        <form  onkeydown="return event.key != 'Enter';">
             <table style="width:100%;font-size:20px" align="left">
                 <tr>
                     <th>標題</th>
@@ -21,11 +21,10 @@
                             @foreach ($shop_list as $shop)
                                 <option value={{$shop->shop}}>{{$shop->shop}}</option>
                             @endforeach
-                        </select>
-                        <input id="shop_name" name="shop_name" type="text" value="">
-                        <input type="hidden" value="X">
-                        <button name="add_shop" value="1">+</button>
-                        <button name="remove_shop" value="1">-</button>
+                        </select><br>
+                        <input  style="font-size:20px" id="shop_name" name="shop_name" type="text" value=""><br>
+                        <button  style="font-size:20px" name="add_shop" value="1">新增商家</button>
+                        <button  style="font-size:20px" name="remove_shop" value="1">移除商家</button>
                     </td>
                 </tr>
                 <tr>
