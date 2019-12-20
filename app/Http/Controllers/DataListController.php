@@ -6,27 +6,32 @@ use App\KeyWord;
 use App\Charts\SampleChart;
 class DataListController extends Controller{
     public static function toDataListSearch(){
-        return view('dataListSearch',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)]);
+        $datalists = DataListController::globalKeyword();
+        return view('dataListSearch',compact('datalists'));
     }
     public static function toDataHandle(){
         DataListController::update();
         DataListController::delete();
-        return view('dataHandle',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)]); 
+        $datalists = DataListController::globalKeyword();
+        return view('dataHandle',compact('datalists')); 
     }
     public static function toDataManage(){
         DataListController::update();
         DataListController::delete();
-        return view('dataManage',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)]); 
+        $datalists = DataListController::globalKeyword();
+        return view('dataManage',compact('datalists')); 
     }
     public static function toDataPriceSearch(){
-        return view('dataPriceSearch',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)]); 
+        $datalists = DataListController::globalKeyword();
+        return view('dataPriceSearch',compact('datalists')); 
     }
     public static function toBigDataAnalysis(){
         return view('bigDataAnalysis'); 
     }
     public static function toDataAnalysisChart(){
         $chart = new SampleChart;
-        return view('dataAnalysisChart',['datalists'=>DataList::sortable()->paginate(20),'hot_keywords'=>KeyWord::paginate(15)],compact('chart')); 
+        $datalists = DataListController::globalKeyword();
+        return view('dataAnalysisChart',compact('datalists'),compact('chart')); 
     }
     public static function update(){
         if (isset($_GET['modify'])){
@@ -52,6 +57,28 @@ class DataListController extends Controller{
             $delete = $_GET['delete'];
             DB::delete("delete from data_list where id = ?",[$delete]);
         }
+    }
+    public static function globalKeyword(){
+        session_start();
+        if (isset($_GET['search_bool'])){
+            if ($_GET['search_bool']!=""){
+                $str = implode('|',$_SESSION['keyword_array']);
+                $datalists = DB::table('data_list')->where('main_keyword','regexp',"$str")->get();
+                return $datalists;
+            }else{
+                echo 'keyword is empty';
+            }
+        }else if (isset($_GET['keyword_input'])){
+            if (isset($_SESSION['keyword_array'])){
+                $_SESSION['keyword_array'][] = $_GET['keyword_input'];
+            }else{
+                $_SESSION['keyword_array'] = array($_GET['keyword_input']);
+            }
+            if($_GET['keyword_input'] == "1"){
+                unset($_SESSION['keyword_array']);
+            }
+        }
+        return DataList::sortable()->paginate(20);    
     }
 }
 ?>
