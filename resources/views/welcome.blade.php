@@ -140,6 +140,11 @@
             background-color: #CCE8EB;
             width: 100px;
         }
+        th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
         table tr:nth-child(odd)
         {
             background: #fff;

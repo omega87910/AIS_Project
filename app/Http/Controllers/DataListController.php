@@ -50,6 +50,13 @@ class DataListController extends Controller{
         }else if (isset($_GET['save'])){
             $title = $_GET['new_title'];
             DB::table('title')->where('id','=','1')->update(['title'=>$title]);
+        }else if (isset($_GET['add_shop'])){
+            $add_shop = $_GET['shop_name'];
+            DB::table('shop_list')->insert(['shop'=>$add_shop]);
+        }
+        else if (isset($_GET['remove_shop'])){
+            $remove_shop = $_GET['shop_name'];
+            DB::delete("delete from shop_list  where shop = ?",[$remove_shop]);
         }
     }
     public static function delete(){

@@ -46,4 +46,3 @@
     </table>
 </div>
 @endsection
-{{-- SELECT * FROM `data_list` WHERE `main_keyword` REGEXP '外套|雨' --}}
