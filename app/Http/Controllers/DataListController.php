@@ -63,7 +63,7 @@ class DataListController extends Controller{
         if (isset($_GET['search_bool'])){
             if ($_GET['search_bool']!=""){
                 $str = implode('|',$_SESSION['keyword_array']);
-                $datalists = DB::table('data_list')->where('main_keyword','regexp',"$str")->get();
+                $datalists = DataList::where('main_keyword','regexp',"$str")->sortable()->get();
                 return $datalists;
             }else{
                 echo 'keyword is empty';
