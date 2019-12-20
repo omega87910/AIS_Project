@@ -60,7 +60,7 @@ class DataListController extends Controller{
     }
     public static function globalKeyword(){
         session_start();
-        if (isset($_GET['search_bool'])){
+        if (isset($_GET['search_bool']) && isset($_SESSION['keyword_array'])){
             if ($_GET['search_bool']!=""){
                 $str = implode('|',$_SESSION['keyword_array']);
                 $datalists = DataList::where('main_keyword','regexp',"$str")->sortable()->get();
@@ -75,6 +75,11 @@ class DataListController extends Controller{
                 $_SESSION['keyword_array'] = array($_GET['keyword_input']);
             }
             if($_GET['keyword_input'] == "1"){
+                unset($_SESSION['keyword_array']);
+            }
+        }else if (isset($_GET['remove_keyword'])){
+            $_SESSION['keyword_array'] = array_diff($_SESSION['keyword_array'],array($_GET['remove_keyword']));
+            if(count($_SESSION['keyword_array'])==0){
                 unset($_SESSION['keyword_array']);
             }
         }
