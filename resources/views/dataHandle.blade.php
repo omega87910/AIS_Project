@@ -54,8 +54,8 @@
                     <td><input style="width:60px" name="new_instruction_for_use" value={{$datalist->instruction_for_use}}></td>
                     <td><input style="width:60px" name="new_instruction_for_others" value={{$datalist->instruction_for_others}}></td>
                     <td>
-                        <button name="modify" value="{{$datalist->id}}">修改</button>
-                        <button name="delete" value="{{$datalist->id}}">刪除</button>
+                        <button class="modbutton" name="modify" value="{{$datalist->id}}">修改</button>
+                        <button class="delbutton" name="delete" value="{{$datalist->id}}">刪除</button>
                     </td>
                 </form>
             </tr>

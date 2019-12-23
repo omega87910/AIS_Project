@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>德成皮革股份有限公司(day 9.5)</title>
+        <title>德成皮革股份有限公司(day 10)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -159,6 +159,110 @@
             letter-spacing: .1rem;
             text-decoration: none;
             text-transform: uppercase;
+        }
+        .delbutton {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            /* padding: 12px 24px; */
+            border: 1px solid #a12727;
+            border-radius: 8px;
+            background: #ff4a4a;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ff4a4a), to(#992727));
+            background: -moz-linear-gradient(top, #ff4a4a, #992727);
+            background: linear-gradient(to bottom, #ff4a4a, #992727);
+            -webkit-box-shadow: #ff5959 0px 0px 0px 0px;
+            -moz-box-shadow: #ff5959 0px 0px 0px 0px;
+            box-shadow: #ff5959 0px 0px 0px 0px;
+            text-shadow: #591717 1px 1px 7px;
+            font: normal normal bold 20px arial;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .delbutton:hover,
+        .delbutton:focus {
+            background: #ff5959;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
+            background: -moz-linear-gradient(top, #ff5959, #b62f2f);
+            background: linear-gradient(to bottom, #ff5959, #b62f2f);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .delbutton:active {
+            background: #982727;
+            background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
+            background: -moz-linear-gradient(top, #982727, #982727);
+            background: linear-gradient(to bottom, #982727, #982727);
+        }
+        .addbutton {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            /* padding: 12px 24px; */
+            border: 1px solid #197a32;
+            border-radius: 8px;
+            background: #2ee55e;
+            background: -webkit-gradient(linear, left top, left bottom, from(#2ee55e), to(#197a32));
+            background: -moz-linear-gradient(top, #2ee55e, #197a32);
+            background: linear-gradient(to bottom, #2ee55e, #197a32);
+            -webkit-box-shadow: #37ff71 0px 0px 0px 0px;
+            -moz-box-shadow: #37ff71 0px 0px 0px 0px;
+            box-shadow: #37ff71 0px 0px 0px 0px;
+            text-shadow: #0f481e 1px 1px 7px;
+            font: normal normal bold 20px arial;
+            color: #ffffff;
+            text-decoration: none;
+        }       
+        .addbutton:hover,
+        .addbutton:focus {
+            border: 1px solid #1d8f3b;
+            background: #37ff71;
+            background: -webkit-gradient(linear, left top, left bottom, from(#37ff71), to(#1e923c));
+            background: -moz-linear-gradient(top, #37ff71, #1e923c);
+            background: linear-gradient(to bottom, #37ff71, #1e923c);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .addbutton:active {
+            background: #197a32;
+            background: -webkit-gradient(linear, left top, left bottom, from(#197a32), to(#197a32));
+            background: -moz-linear-gradient(top, #197a32, #197a32);
+            background: linear-gradient(to bottom, #197a32, #197a32);
+        }
+        .modbutton {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            /* padding: 12px 24px; */
+            border: 1px solid #a8ad26;
+            border-radius: 8px;
+            background: #f2fa19;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f2fa19), to(#a3981f));
+            background: -moz-linear-gradient(top, #f2fa19, #a3981f);
+            background: linear-gradient(to bottom, #f2fa19, #a3981f);
+            -webkit-box-shadow: #37ff71 0px 0px 0px 0px;
+            -moz-box-shadow: #37ff71 0px 0px 0px 0px;
+            box-shadow: #37ff71 0px 0px 0px 0px;
+            text-shadow: #0f481e 1px 1px 7px;
+            font: normal normal bold 20px arial;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .modbutton:hover,
+        .modbutton:focus {
+            border: 1px solid #c1c72c;
+            background: #ffff1e;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffff1e), to(#c4b625));
+            background: -moz-linear-gradient(top, #ffff1e, #c4b625);
+            background: linear-gradient(to bottom, #ffff1e, #c4b625);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .modbutton:active {
+            background: #91960f;
+            background: -webkit-gradient(linear, left top, left bottom, from(#91960f), to(#a3981f));
+            background: -moz-linear-gradient(top, #91960f, #a3981f);
+            background: linear-gradient(to bottom, #91960f, #a3981f);
         }
         </style>
     </head>
