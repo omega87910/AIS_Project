@@ -5,3 +5,6 @@
     <p style="font-size:32px">大數據資料分析</p>
 </div>
 @endsection
+@section('failed')
+    <p style="font-size:32px">請登入後再使用</p>   
+@endsection

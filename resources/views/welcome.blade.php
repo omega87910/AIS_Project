@@ -198,9 +198,15 @@
                     <a href="{{'dataDashboard'}}">產業分析智慧儀表板</a>
                     <a href="{{'dataManage'}}">後台管理系統</a>
                 </div>
-                
                 <div>
-                    @yield('MainArea')
+                    @if (Route::has('login')) <!-- 如果登入了 -->
+                        @auth <!-- 驗證成功 -->
+                            @yield('MainArea')
+                        @else <!-- 驗證失敗 -->
+                            @yield('failed')       
+                        @endauth
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
