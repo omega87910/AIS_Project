@@ -1,8 +1,8 @@
 @extends('blank')
 
 @section('failed')
-<div class="container">
-    <div class="row justify-content-center  align-items-center">
+<div class="container" style="height:100%">
+    <div class="row justify-content-center align-items-center" style="height:100%">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header" style="font-size:32px">{{ __('Login') }}</div>

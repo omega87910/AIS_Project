@@ -361,7 +361,7 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" style="height:100%">
                 @yield('failed') 
             </div>
         </div>
