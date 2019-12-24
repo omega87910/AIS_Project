@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('blank')
 
 @section('failed')
 <div class="container">

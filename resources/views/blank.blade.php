@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>德成皮革股份有限公司(day 10)</title>
+        <title>德成皮革股份有限公司(day 11)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -362,32 +362,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    <?php
-                        $titles = DB::table('title')->where('id','=','1')->get();
-                    ?>
-                    {{$titles[0]->title}}
-                </div>
-                <div class="navTop" style="background-color:#117E96;">
-                    <a href="{{'dataImport'}}">資料匯入</a>
-                    <a href="{{'dataHandle'}}">資料處理作業</a>
-                    <a href="{{'dataListSearch'}}">商品明細資訊查詢</a>
-                    <a href="{{'dataPriceSearch'}}">商品價格查詢</a>
-                    <a href="{{'dataAnalysisChart'}}">商品資料分析圖</a>
-                    <a href="{{'bigDataAnalysis'}}">大數據資料分析</a>
-                    <a href="{{'dataDashboard'}}">產業分析智慧儀表板</a>
-                    <a href="{{'dataManage'}}">後台管理系統</a>
-                </div>
-                <div>
-                    @if (Route::has('login')) <!-- 如果登入了 -->
-                        @auth <!-- 驗證成功 -->
-                            @yield('MainArea')
-                        @else <!-- 驗證失敗 -->
-                            @yield('failed')       
-                        @endauth
-                    </div>
-                    @endif
-                </div>
+                @yield('failed') 
             </div>
         </div>
     </body>

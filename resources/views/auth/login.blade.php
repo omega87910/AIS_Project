@@ -1,8 +1,8 @@
-@extends('welcome')
+@extends('blank')
 
 @section('failed')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center  align-items-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header" style="font-size:32px">{{ __('Login') }}</div>
