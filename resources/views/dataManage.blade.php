@@ -42,7 +42,7 @@
 @endsection
 @section('failed')
     <p style="font-size:32px">請登入後再使用</p>   
-    <div class="container">
+    {{-- <div class="container">
         <h2>Modal Example</h2>
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="open">Open Modal</button>
@@ -94,5 +94,5 @@
         </div>
       </div>
         </form>
-      </div>
+      </div> --}}
 @endsection

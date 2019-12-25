@@ -4,9 +4,44 @@
 <?php
     $shop_list=DB::table('shop_list')->select('shop')->get();
 ?>
-<div style="padding:0% 25% 0% 25%">
+<div style="padding:0% 20% 0% 20%">
     <p style="font-size:32px">資料匯入</p>
-    <div align="left">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group row">
+                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">Web Url:</label>
+                <div class="col-md-10">
+                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">主要關鍵字:</label>
+                <div class="col-md-4">
+                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                </div>
+                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">次要關鍵字:</label>
+                <div class="col-md-4">
+                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">商家選項:</label>
+                <div class="col-md-10">
+                <select style="width:100%;font-size:20px">
+                    @foreach ($shop_list as $shop)
+                        <option value={{$shop->shop}}>{{$shop->shop}}</option>
+                    @endforeach
+                </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <button class="btn btn-primary" style="font-size:20px;width:150px;height:50px">送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div align="left">
         <form>
             <label for="inp" class="inp">
                 <p style="font-size:14px">URL</p>
@@ -34,7 +69,7 @@
             <br>
             <button style="font-size:14px">送出</button>
         </form>
-    </div>
+    </div> --}}
 </div>
 @endsection
 @section('failed')

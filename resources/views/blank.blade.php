@@ -72,7 +72,7 @@
             }
             html, body {
                 /* background-color:honeydew; */
-                background-color:aliceblue;
+                background-color:skyblue;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
