@@ -13,7 +13,7 @@
             <?php
              if (isset($_SESSION['keyword_array'])){ 
                 foreach($_SESSION['keyword_array'] as $item){
-                    echo "<button name='remove_keyword' value=$item>$item</button>";
+                    echo "<button class='keybutton' name='remove_keyword' value=$item>$item</button>";
                 }
             }
             ?>

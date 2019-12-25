@@ -13,13 +13,14 @@
             <?php
              if (isset($_SESSION['keyword_array'])){ 
                 foreach($_SESSION['keyword_array'] as $item){
-                    echo "<button name='remove_keyword' value=$item>$item</button>";
+                    echo "<button class='keybutton' name='remove_keyword' value=$item>$item</button>";
                 }
             }
             ?>
         </form>
+        <br>
         <form>
-            <button style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
+            <button class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
         </form>
     </div>
     <table class="paleBlueRows" style="width:100%">

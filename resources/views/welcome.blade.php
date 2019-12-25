@@ -67,6 +67,12 @@
             });
       </script>
         <style>
+            .searchbutton{
+                border-radius: 20px;
+            }
+            .keybutton{
+                border-radius: 10px;
+            }
             .modal-backdrop{
                 opacity: 0.5;
             }
@@ -241,7 +247,7 @@
             display: inline-block;
             text-align: center;
             vertical-align: middle;
-            /* padding: 12px 24px; */
+            padding: 4px 16px;
             border: 1px solid #a12727;
             border-radius: 8px;
             background: #ff4a4a;
@@ -275,7 +281,7 @@
             display: inline-block;
             text-align: center;
             vertical-align: middle;
-            /* padding: 12px 24px; */
+            padding: 4px 16px;
             border: 1px solid #197a32;
             border-radius: 8px;
             background: #2ee55e;
@@ -310,7 +316,7 @@
             display: inline-block;
             text-align: center;
             vertical-align: middle;
-            /* padding: 12px 24px; */
+            padding: 4px 16px;
             border: 1px solid #a8ad26;
             border-radius: 8px;
             background: #f2fa19;
@@ -342,6 +348,11 @@
             background: linear-gradient(to bottom, #91960f, #a3981f);
         }
         </style>
+        <script>    
+            if(typeof window.history.pushState == 'function') {
+                window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF'];?>');
+            }
+        </script>
     </head>
     <body>
         <div class="flex-top position-ref full-height">
