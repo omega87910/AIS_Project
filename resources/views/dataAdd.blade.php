@@ -3,6 +3,7 @@
 @section('MainArea')
 
 <p style="font-size:32px">資料添加作業</p>
+<form>
 <div class="row">
     <div class="col-md-4">
         <div class="form-group row">
@@ -82,12 +83,13 @@
             </div>
             <div class="col-md-8">
                 <button class="addbutton">新增</button>
-                <button class="modbutton">更新</button>
+                <button class="modbutton" name="modify" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->id;}else{echo "not_found";}?>>更新</button>
                 <button class="delbutton">刪除</button>
             </div>
         </div>
     </div>
 </div>
+</form>
     <div style="text-align:left">
         <p>關鍵字</p>
         <form>
