@@ -15,6 +15,12 @@ class DataListController extends Controller{
         $datalists = DataListController::globalKeyword();
         return view('dataHandle',compact('datalists')); 
     }
+    public static function toDataAdd(){
+        DataListController::update();
+        DataListController::delete();
+        $datalists = DataListController::globalKeyword();
+        return view('dataAdd',compact('datalists'));
+    }
     public static function toDataManage(){
         DataListController::update();
         DataListController::delete();
@@ -57,6 +63,15 @@ class DataListController extends Controller{
         else if (isset($_GET['remove_shop'])){
             $remove_shop = $_GET['shop_name'];
             DB::delete("delete from shop_list  where shop = ?",[$remove_shop]);
+        }
+    }
+    public static function select(){
+        if(isset($_GET['edit'])){
+            $editID=$_GET['edit'];
+            $datalists_edit = DB::table('data_list')->where('id','=','$editID')->get();
+            return $datalists_edit;
+        }else{
+            return DB::table('data_list')->get();
         }
     }
     public static function delete(){

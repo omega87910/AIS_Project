@@ -2,8 +2,8 @@
 
 @section('MainArea')
 
-<div style="padding:0% 25% 0% 25%">
-    <p style="font-size:32px">資料處理作業</p>
+<div style="padding:0% 10% 0% 10%">
+    <p style="font-size:32px">資料多重搜尋作業</p>
     <div style="text-align:left">
         <p>關鍵字</p>
         <form>
@@ -36,27 +36,22 @@
                 <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
                 <th>@sortablelink('instruction_for_use','使用方法',[],['class' => 'mytable','rel' => 'nofollow'])</th>
                 <th>@sortablelink('instruction_for_others','其他說明',[],['class' => 'mytable','rel' => 'nofollow'])</th>
-                <th>功能</th>
             </tr>
         </thead>
         <tbody style="font-size:14px">
             @foreach($datalists as $datalist)
             <tr>
                 <form>
-                    <td><input style="width:60px" name="new_main_keyword" value={{$datalist->main_keyword}}></td>
-                    <td><input style="width:60px" name="new_second_keyword" value={{$datalist->second_keyword}}></td>
-                    <td><input style="width:60px" name="new_product_description" value={{$datalist->product_description}}></td>
-                    <td><input style="width:60px" name="new_price" value={{$datalist->price}}></td>
-                    <td><input style="width:60px" name="new_color" value={{$datalist->color}}></td>
-                    <td><input style="width:60px" name="new_part" value={{$datalist->part}}></td>
-                    <td><input style="width:60px" name="new_thickness" value={{$datalist->thickness}}></td>
-                    <td><input style="width:60px" name="new_size" value={{$datalist->size}}></td>
-                    <td><input style="width:60px" name="new_instruction_for_use" value={{$datalist->instruction_for_use}}></td>
-                    <td><input style="width:60px" name="new_instruction_for_others" value={{$datalist->instruction_for_others}}></td>
-                    <td>
-                        <button class="modbutton" name="modify" value="{{$datalist->id}}">修改</button>
-                        <button class="delbutton" name="delete" value="{{$datalist->id}}">刪除</button>
-                    </td>
+                    <td>{{$datalist->main_keyword}}</td>
+                    <td>{{$datalist->second_keyword}}</td>
+                    <td>{{$datalist->product_description}}</td>
+                    <td>{{$datalist->price}}</td>
+                    <td>{{$datalist->color}}</td>
+                    <td>{{$datalist->part}}</td>
+                    <td>{{$datalist->thickness}}</td>
+                    <td>{{$datalist->size}}</td>
+                    <td>{{$datalist->instruction_for_use}}</td>
+                    <td>{{$datalist->instruction_for_others}}</td>
                 </form>
             </tr>
             @endforeach

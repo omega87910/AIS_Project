@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>德成皮革股份有限公司(day 10)</title>
+        <title>德成皮革股份有限公司(day 11)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -370,6 +370,7 @@
                 </div>
                 <div class="navTop" style="background-color:#117E96;">
                     <a href="{{'dataImport'}}">資料匯入</a>
+                    <a href="{{'dataAdd'}}">資料添加</a>
                     <a href="{{'dataHandle'}}">資料處理作業</a>
                     <a href="{{'dataListSearch'}}">商品明細資訊查詢</a>
                     <a href="{{'dataPriceSearch'}}">商品價格查詢</a>

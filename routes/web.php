@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/dataImport', function () { return view('dataImport');});//資料匯入 
 Route::get('dataHandle','DataListController@toDataHandle');//資料處理作業
+Route::get('dataAdd','DataListController@toDataAdd');//資料處理作業
 Route::get('dataListSearch','DataListController@toDataListSearch');//商品明細資訊查詢
 Route::get('dataPriceSearch','DataListController@toDataPriceSearch');//商品價格查詢
 Route::get('dataAnalysisChart','DataListController@toDataAnalysisChart');//商品分析圖

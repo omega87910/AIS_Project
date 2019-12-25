@@ -23,8 +23,8 @@
                             @endforeach
                         </select><br>
                         <input  style="font-size:20px" id="shop_name" name="shop_name" type="text" value=""><br>
-                        <button  style="font-size:20px" name="add_shop" value="1">新增商家</button>
-                        <button  style="font-size:20px" name="remove_shop" value="1">移除商家</button>
+                        <button class="addbutton" style="font-size:20px" name="add_shop" value="1">新增商家</button>
+                        <button class="delbutton" style="font-size:20px" name="remove_shop" value="1">移除商家</button>
                     </td>
                 </tr>
                 <tr>

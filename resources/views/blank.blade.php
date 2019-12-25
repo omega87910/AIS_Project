@@ -120,7 +120,7 @@
                 text-transform: uppercase;
             }
             .links > a {
-                color: white;
+                color: black;
                 padding: 0px 10px;
                 font-size: 18px;
                 font-weight: 600;
@@ -129,8 +129,7 @@
                 text-transform: uppercase;
             }
             .links > a:hover{
-                color: black;
-                background-color: snow;
+                color:teal;
             }
             .navTop > a:hover{
                 background-color:#223254;
