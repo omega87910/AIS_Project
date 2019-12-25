@@ -82,9 +82,9 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-8">
-                <button class="addbutton">新增</button>
+                <button class="addbutton" name="add">新增</button>
                 <button class="modbutton" name="modify" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->id;}else{echo "not_found";}?>>更新</button>
-                <button class="delbutton">刪除</button>
+                <button class="delbutton" name="delete" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->id;}else{echo "not_found";}?>  onclick="return confirm('你確定要刪除這筆資料嗎？');">刪除</button>
             </div>
         </div>
     </div>
