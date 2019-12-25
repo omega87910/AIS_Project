@@ -24,7 +24,7 @@
                         </select><br>
                         <input  style="font-size:20px" id="shop_name" name="shop_name" type="text" value=""><br>
                         <button class="addbutton" style="font-size:20px" name="add_shop" value="1">新增商家</button>
-                        <button class="delbutton" style="font-size:20px" name="remove_shop" value="1">移除商家</button>
+                        <button class="delbutton" style="font-size:20px" name="remove_shop" value="1" onclick="return confirm('你確定要刪除這筆資料嗎？');">移除商家</button>
                     </td>
                 </tr>
                 <tr>

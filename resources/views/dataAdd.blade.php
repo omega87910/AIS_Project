@@ -7,75 +7,75 @@
 <div class="row">
     <div class="col-md-4">
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">主要關鍵字：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">主要關鍵字：</label>
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_main_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->main_keyword ;}?> > 
+                <input style="font-size:20px" class="form-control" name="edit_main_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->main_keyword ;}?> > 
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">次要關鍵字：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">次要關鍵字：</label>
 
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_second_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->second_keyword ;}?> >
+                <input style="font-size:20px" class="form-control" name="edit_second_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->second_keyword ;}?> >
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">產品說明：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">產品說明：</label>
 
             <div class="col-md-7">
-                <textarea style="font-size:16px" class="form-control" name="edit_product_description"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->product_description;}?></textarea>
+                <textarea style="font-size:20px" class="form-control" name="edit_product_description"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->product_description;}?></textarea>
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">使用說明：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">使用說明：</label>
 
             <div class="col-md-7">
-                <textarea style="font-size:16px" class="form-control" name="edit_instruction_for_use"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->instruction_for_use;}?></textarea>
+                <textarea style="font-size:20px" class="form-control" name="edit_instruction_for_use"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->instruction_for_use;}?></textarea>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">價格：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">價格：</label>
             <div class="col-md-7">
                 <input style="font-size:16px" class="form-control" name="edit_price" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->price;}?>>
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">顏色：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">顏色：</label>
 
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_color" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->color;}?>>
+                <input style="font-size:20px" class="form-control" name="edit_color" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->color;}?>>
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">厚度：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">厚度：</label>
 
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_thickness" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->thickness;}?>>
+                <input style="font-size:20px" class="form-control" name="edit_thickness" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->thickness;}?>>
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">部位：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">部位：</label>
 
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_part" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->part;}?>>
+                <input style="font-size:20px" class="form-control" name="edit_part" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->part;}?>>
             </div>
         </div>
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">大小：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">大小：</label>
 
             <div class="col-md-7">
-                <input style="font-size:16px" class="form-control" name="edit_size" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->size;}?>>
+                <input style="font-size:20px" class="form-control" name="edit_size" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->size;}?>>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group row">
-            <label style="font-size:16px" class="col-md-5 col-form-label text-md-right">其他說明：</label>
+            <label style="font-size:20px" class="col-md-5 col-form-label text-md-right">其他說明：</label>
 
             <div class="col-md-7">
-                <textarea style="font-size:16px;height:150px" class="form-control" name="edit_instruction_for_others"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->instruction_for_others;}?></textarea>
+                <textarea style="font-size:20px;height:150px" class="form-control" name="edit_instruction_for_others"><?php if(isset($_GET['edit'])){echo $datalists_edit[0]->instruction_for_others;}?></textarea>
             </div>
         </div>
         <div class="form-group row">
@@ -90,7 +90,9 @@
     </div>
 </div>
 </form>
-    <div style="text-align:left">
+<div class="row" style="padding:0px 10px">
+    <div class="col-md-12">
+    <div style="text-align:left;font-size:20px;">
         <p>關鍵字</p>
         <form>
             <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
@@ -106,10 +108,10 @@
             ?>
         </form>
         <form>
-            <button style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
+            <button class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
         </form>
     </div>
-    <table class="paleBlueRows" style="width:100%">
+    <table class="paleBlueRows" style="width:100%;font-size:20px;">
         <thead>
             <tr>
                 <th>功能</th>
@@ -126,7 +128,7 @@
 
             </tr>
         </thead>
-        <tbody style="font-size:14px">
+        <tbody style="font-size:20px">
             @foreach($datalists as $datalist)
             <tr>
                 <form>
@@ -155,6 +157,8 @@
             @endforeach
         </tbody>
     </table>
+</div>
+</div>
 @endsection
 @section('failed')
     <p style="font-size:32px">請登入後再使用</p>   

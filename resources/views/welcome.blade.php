@@ -382,7 +382,7 @@
                 <div class="navTop" style="background-color:#117E96;">
                     <a href="{{'dataImport'}}">資料匯入</a>
                     <a href="{{'dataAdd'}}">資料添加</a>
-                    <a href="{{'dataHandle'}}">資料處理作業</a>
+                    <a href="{{'dataHandle'}}">資料多重搜尋作業</a>
                     <a href="{{'dataListSearch'}}">商品明細資訊查詢</a>
                     <a href="{{'dataPriceSearch'}}">商品價格查詢</a>
                     <a href="{{'dataAnalysisChart'}}">商品資料分析圖</a>

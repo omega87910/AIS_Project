@@ -2,9 +2,9 @@
 
 @section('MainArea')
 
-<div style="padding:0% 10% 0% 10%">
+<div style="padding:0% 5% 0% 5%">
     <p style="font-size:32px">資料多重搜尋作業</p>
-    <div style="text-align:left">
+    <div style="text-align:left;font-size:20px;">
         <p>關鍵字</p>
         <form>
             <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
@@ -20,10 +20,10 @@
             ?>
         </form>
         <form>
-            <button style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
+            <button class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
         </form>
     </div>
-    <table class="paleBlueRows" style="width:100%">
+    <table class="paleBlueRows" style="width:100%;font-size:20px;">
         <thead>
             <tr>
                 <th>@sortablelink('main_keyword','主要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
@@ -38,7 +38,7 @@
                 <th>@sortablelink('instruction_for_others','其他說明',[],['class' => 'mytable','rel' => 'nofollow'])</th>
             </tr>
         </thead>
-        <tbody style="font-size:14px">
+        <tbody style="font-size:20px">
             @foreach($datalists as $datalist)
             <tr>
                 <form>

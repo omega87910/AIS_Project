@@ -1,9 +1,9 @@
 @extends('welcome')
 
 @section('MainArea')
-<div style="padding:0% 25% 0% 25%">
+<div style="padding:0% 5% 0% 5%">
     <p style="font-size:32px">商品明細資訊查詢</p>
-        <div style="text-align:left">
+        <div style="text-align:left;font-size:20px;">
             <p>關鍵字</p>
             <form>
                 <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
@@ -19,10 +19,10 @@
                 ?>
             </form>
             <form>
-                <button style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
+                <button  class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
             </form>
         </div>
-    <table class="paleBlueRows" style="width:100%">
+    <table class="paleBlueRows" style="width:100%;font-size:20px;">
         <thead>
             <tr>
                 <th>@sortablelink('main_keyword','主要關鍵字',[],['class' => 'mytable','rel' => 'nofollow'])</th>
@@ -32,7 +32,7 @@
                 <th>@sortablelink('size','大小',[],['class' => 'mytable','rel' => 'nofollow'])</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="font-size:20px;">
             @foreach($datalists as $datalist)
             <tr>
                 <td>{{$datalist->main_keyword}}</td>
