@@ -19,7 +19,8 @@ class DataListController extends Controller{
         DataListController::update();
         DataListController::delete();
         $datalists = DataListController::globalKeyword();
-        return view('dataAdd',compact('datalists'));
+        $datalists_edit = DataListController::select();
+        return view('dataAdd',compact('datalists'),compact('datalists_edit'));
     }
     public static function toDataManage(){
         DataListController::update();
@@ -68,7 +69,7 @@ class DataListController extends Controller{
     public static function select(){
         if(isset($_GET['edit'])){
             $editID=$_GET['edit'];
-            $datalists_edit = DB::table('data_list')->where('id','=','$editID')->get();
+            $datalists_edit = DB::table('data_list')->where('id','=',$editID)->get();
             return $datalists_edit;
         }else{
             return DB::table('data_list')->get();
