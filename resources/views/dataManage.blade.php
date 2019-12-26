@@ -12,24 +12,24 @@
             <table style="width:100%;font-size:20px" align="left">
                 <tr>
                     <th>標題</th>
-                    <td style="text-align:left"><input style="font-size:20px" name="new_title" value={{$titles[0]->title}}></td>
+                    <td style="text-align:left;padding:10px 5px;"><input style="font-size:20px" name="new_title" value={{$titles[0]->title}}></td>
                 </tr>
                 <tr>
                     <th>商家選項</th>
-                    <td style="text-align:left">
-                        <select id="shop_select" style="width:200px;font-size:20px" onchange="document.getElementById('shop_name').value=document.getElementById('shop_select').value">
+                    <td style="text-align:left;padding:10px 5px;">
+                        <select id="shop_select" style="width:200px;font-size:20px;padding:10px 5px;" onchange="document.getElementById('shop_name').value=document.getElementById('shop_select').value">
                             @foreach ($shop_list as $shop)
                                 <option value={{$shop->shop}}>{{$shop->shop}}</option>
                             @endforeach
                         </select><br>
-                        <input  style="font-size:20px" id="shop_name" name="shop_name" type="text" value=""><br>
+                        <input  style="font-size:20px;margin:10px 0px 20px 0px" id="shop_name" name="shop_name" type="text" value=""><br>
                         <button class="addbutton" style="font-size:20px" name="add_shop" value="1">新增商家</button>
                         <button class="delbutton" style="font-size:20px" name="remove_shop" value="1" onclick="return confirm('你確定要刪除這筆資料嗎？');">移除商家</button>
                     </td>
                 </tr>
                 <tr>
                     <th></th>
-                    <td style="text-align:left"><button style="font-size:20px" name="save" value="1">儲存</button></td>
+                    <td style="text-align:left"><button class="btn btn-primary" style="font-size:20px;margin:10px 0px 10px 10px" name="save" value="1">儲存</button></td>
                 </tr>
             </table>
         </form>
