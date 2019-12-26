@@ -20,8 +20,10 @@
             </form>
             <form>
                 <button  class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
+                <button class="btn btn-danger" style="font-size:20px;height:60px" name="clear_bool" value="1">清除關鍵字</button>
             </form>
         </div>
+        {{$datalists->links()}}
     <table class="paleBlueRows" style="width:100%;font-size:20px;">
         <thead>
             <tr>
@@ -44,6 +46,7 @@
             @endforeach
         </tbody>
     </table>
+    {{$datalists->links()}}
 </div>
 @endsection
 @section('failed')

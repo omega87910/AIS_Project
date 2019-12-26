@@ -95,30 +95,36 @@ class DataListController extends Controller{
     }
     public static function globalKeyword(){
         session_start();
+        $datalists = DataList::sortable()->paginate(30);
         if (isset($_GET['search_bool']) && isset($_SESSION['keyword_array'])){
             if ($_GET['search_bool']!=""){
                 $str = implode('|',$_SESSION['keyword_array']);
-                $datalists = DataList::where('main_keyword','regexp',"$str")->sortable()->get();
+                $datalists = DataList::where('main_keyword','regexp',"$str")->sortable()->paginate(30);
                 return $datalists;
             }else{
                 echo 'keyword is empty';
             }
+        }else if(isset($_GET['clear_bool'])){
+            unset($_SESSION['keyword_array']);
         }else if (isset($_GET['keyword_input'])){
             if (isset($_SESSION['keyword_array'])){
                 $_SESSION['keyword_array'][] = $_GET['keyword_input'];
             }else{
                 $_SESSION['keyword_array'] = array($_GET['keyword_input']);
             }
-            if($_GET['keyword_input'] == "1"){
-                unset($_SESSION['keyword_array']);
-            }
         }else if (isset($_GET['remove_keyword'])){
             $_SESSION['keyword_array'] = array_diff($_SESSION['keyword_array'],array($_GET['remove_keyword']));
             if(count($_SESSION['keyword_array'])==0){
                 unset($_SESSION['keyword_array']);
             }
+        }else if (isset($_GET['page']) && isset($_SESSION['keyword_array'])){
+            $str = implode('|',$_SESSION['keyword_array']);
+            $datalists = DataList::where('main_keyword','regexp',"$str")->sortable()->paginate(30);
+            return $datalists;
+        }else{
+            $datalists = DataList::sortable()->paginate(30);
         }
-        return DataList::sortable()->paginate(20);    
+        return $datalists;   
     }
 }
 ?>
