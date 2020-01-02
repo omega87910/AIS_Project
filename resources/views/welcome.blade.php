@@ -67,6 +67,9 @@
             });
       </script>
         <style>
+            .divback{
+                background-image: url('/blue-snow.png');
+            }
             .searchbutton{
                 border-radius: 20px;
             }
@@ -76,7 +79,8 @@
             .modal-backdrop{
                 opacity: 0.5;
             }
-            html, body {
+            html, body{
+                background-image: url('/blue-snow.png');
                 /* background-color:honeydew; */
                 background-color:aliceblue;
                 color: #636b6f;
@@ -85,7 +89,6 @@
                 height: 100vh;
                 margin: 0;
             }
-
             .full-height {
                 height: 100vh;
             }

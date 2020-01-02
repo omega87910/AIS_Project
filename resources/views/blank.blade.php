@@ -73,6 +73,7 @@
             html, body {
                 /* background-color:honeydew; */
                 background-color:skyblue;
+                background-image: url('/blue-snow.png');
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;

@@ -1,7 +1,7 @@
 @extends('blank')
 
 @section('failed')
-<div class="container" style="height:100%">
+<div class="container" style="height:100%;background-image: url('blue-snow.png');">
     <div class="row justify-content-center align-items-center" style="height:100%">
         <div class="col-md-6">
             <div class="card">

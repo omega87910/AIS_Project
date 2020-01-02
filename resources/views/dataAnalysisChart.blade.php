@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('MainArea')
-<div style="padding:0% 5% 0% 5%">
+<div style="padding:0% 5% 0% 5%;">
     <p style="font-size:32px">商品資料分析圖</p>
     <div style="text-align:left;font-size:20px;">
         <p>關鍵字</p>
