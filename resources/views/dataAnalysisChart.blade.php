@@ -37,16 +37,28 @@
         $label_array = array();
         $price_array = array();
         $color_array = array();
+        $times_array = array();
         $rand = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f');
         foreach($datalists as $datalist){
-            $label_array[] = $datalist->main_keyword;
-            $price_array[] = $datalist->price;
+            if(array_key_exists($datalist->main_keyword,$label_array)){//若陣列已經儲存該label
+                $label_array[$datalist->main_keyword] += $datalist->price;
+                $times_array[$datalist->main_keyword] += 1;
+            }else{
+                $label_array[$datalist->main_keyword] = $datalist->price;
+                $times_array[$datalist->main_keyword] = 1;
+            }
+        }
+        $value_array = array_values($label_array);
+        $times_array = array_values($times_array);
+        for($i=0;$i<count($value_array);$i++){
+            $avg_array[] = $value_array[$i] / $times_array[$i];
         }
         for($i=0;$i<count($label_array);$i++){
             $color_array[] = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
         }
-        $chart->labels($label_array);//商品種類陣列
-        $chart->dataset('price', 'bar', $price_array)->backgroundColor($color_array);//商品價格陣列
+        
+        $chart->labels(array_keys($label_array));//商品種類陣列
+        $chart->dataset('price', 'bar', $avg_array)->backgroundColor($color_array);//商品價格陣列
     ?>
     <div>
         {!! $chart->container() !!}
