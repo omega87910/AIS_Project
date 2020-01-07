@@ -108,11 +108,11 @@
             ?>
         </form>
         <form>
-            <div class="custom-control custom-radio">
+            <div class="custom-control custom-radio" style="display:inline;font-size:22px;">
                 <input type="radio" class="custom-control-input" id="defaultChecked" name="search_which" value="main" checked>
                 <label class="custom-control-label" for="defaultChecked">主要</label>
             </div>
-            <div class="custom-control custom-radio">
+            <div class="custom-control custom-radio" style="display:inline;font-size:22px;">
                 <input type="radio" class="custom-control-input" id="defaultUnchecked" name="search_which" value="second">
                 <label class="custom-control-label" for="defaultUnchecked">次要</label>
             </div>
