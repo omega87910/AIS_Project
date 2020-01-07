@@ -2,7 +2,7 @@
 
 @section('MainArea')
 <div style="padding:0% 5% 0% 5%">
-    <p style="font-size:32px">商品明細資訊查詢</p>
+    <p style="font-size:32px">資訊查詢</p>
         <div style="text-align:left;font-size:20px;">
             <p>關鍵字</p>
             <form>
