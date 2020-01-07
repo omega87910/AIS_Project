@@ -70,6 +70,7 @@
             .dataAddLabel{
                 font-size:20px;
                 font-weight:bold;
+                font-family: Arial, Helvetica, sans-serif;
             }
             .divback{
                 background-image: url('/blue-snow.png');
