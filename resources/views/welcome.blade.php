@@ -70,7 +70,7 @@
             .dataAddLabel{
                 font-size:20px;
                 font-weight:bold;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family:Microsoft JhengHei;
             }
             .divback{
                 background-image: url('/blue-snow.png');
