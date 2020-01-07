@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>德成皮革股份有限公司(day 13)</title>
+        <title>德成皮革股份有限公司(day 14)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -114,12 +114,14 @@
             }
 
             .title {
+                font-weight: bold;
                 color:#bfffff;
                 font-size: 64px;
                 background-color:#13aeab;
             }
             .navTop > a {
                 color:#bfffff;
+                font-weight: bold;
                 /* color: #636b6f; */
                 padding: 0px 10px;
                 font-size: 18px;
