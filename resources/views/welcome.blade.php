@@ -67,6 +67,10 @@
             });
       </script>
         <style>
+            .dataAddLabel{
+                font-size:20px;
+                font-weight:bold;
+            }
             .divback{
                 background-image: url('/blue-snow.png');
             }
