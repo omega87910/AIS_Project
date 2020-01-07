@@ -9,14 +9,14 @@
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">主要關鍵字：</label>
             <div class="col-md-7">
-                <input style="font-size:20px" class="form-control" name="edit_main_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->main_keyword ;}?> > 
+                <input style="font-size:20px;" class="form-control dataAddLabel" name="edit_main_keyword" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->main_keyword . '"';}?> > 
             </div>
         </div>
         <div class="form-group row">
             <label  class="col-md-5 col-form-label text-md-right dataAddLabel">次要關鍵字：</label>
 
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_second_keyword" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->second_keyword ;}?> >
+                <input class="form-control dataAddLabel" name="edit_second_keyword" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->second_keyword . '"';}?> >
             </div>
         </div>
         <div class="form-group row">
@@ -38,35 +38,35 @@
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">價格：</label>
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_price" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->price;}?>>
+                <input class="form-control dataAddLabel" name="edit_price" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->price . '"';}?>>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">顏色：</label>
 
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_color" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->color;}?>>
+                <input class="form-control dataAddLabel" name="edit_color" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->color . '"';}?>>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">厚度：</label>
 
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_thickness" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->thickness;}?>>
+                <input class="form-control dataAddLabel" name="edit_thickness" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->thickness . '"';}?>>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">部位：</label>
 
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_part" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->part;}?>>
+                <input class="form-control dataAddLabel" name="edit_part" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->part . '"';}?>>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-md-5 col-form-label text-md-right dataAddLabel">大小：</label>
 
             <div class="col-md-7">
-                <input class="form-control dataAddLabel" name="edit_size" value=<?php if(isset($_GET['edit'])){echo $datalists_edit[0]->size;}?>>
+                <input class="form-control dataAddLabel" name="edit_size" value=<?php if(isset($_GET['edit'])){echo '"' . $datalists_edit[0]->size . '"';}?>>
             </div>
         </div>
     </div>
