@@ -124,8 +124,7 @@
                 font-weight: bold;
                 /* color: #636b6f; */
                 padding: 0px 10px;
-                font-size: 18px;
-                font-weight: 600;
+                font-size: 20px;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -388,7 +387,7 @@
                     <a href="{{'dataImport'}}">資料匯入</a>
                     <a href="{{'dataAdd'}}">資料添加</a>
                     <a href="{{'dataHandle'}}">資料多重搜尋作業</a>
-                    <a href="{{'dataListSearch'}}">商品明細資訊查詢</a>
+                    <a href="{{'dataListSearch'}}">資訊查詢</a>
                     <a href="{{'dataPriceSearch'}}">商品價格查詢</a>
                     <a href="{{'dataAnalysisChart'}}">商品資料分析圖</a>
                     <a href="{{'bigDataAnalysis'}}">大數據資料分析</a>
