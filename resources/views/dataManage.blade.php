@@ -9,7 +9,7 @@
     <p style="font-size:32px;font-family:Microsoft JhengHei;font-weight:bold;">後台管理系統</p>
     <div>
         <form  onkeydown="return event.key != 'Enter';">
-            <table style="width:100%;font-size:20px" align="left">
+            <table style="width:100%;font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" align="left">
                 <tr>
                     <th>標題</th>
                     <td style="text-align:left;padding:10px 5px;"><input style="font-size:20px" name="new_title" value={{$titles[0]->title}}></td>

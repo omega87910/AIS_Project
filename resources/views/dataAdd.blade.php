@@ -113,7 +113,7 @@
         </form>
     </div>
     {{$datalists->links()}}
-    <table class="paleBlueRows" style="width:100%;font-size:20px;">
+    <table class="paleBlueRows" style="width:100%;font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;">
         <thead>
             <tr>
                 <th>功能</th>
