@@ -68,7 +68,7 @@
       </script>
         <style>
             .dataAddLabel{
-                font-size:20px;
+                font-size:22px;
                 font-weight:bold;
                 font-family:Microsoft JhengHei;
             }
@@ -130,7 +130,7 @@
                 font-weight: bold;
                 /* color: #636b6f; */
                 padding: 0px 10px;
-                font-size: 20px;
+                font-size: 22px;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;

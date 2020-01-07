@@ -6,7 +6,7 @@
     $shop_list=DB::table('shop_list')->select('shop')->get();
 ?>
 <div style="padding:0% 25% 0% 25%">
-    <p style="font-size:32px">後台管理系統</p>
+    <p style="font-size:32px;font-family:Microsoft JhengHei;font-weight:bold;">後台管理系統</p>
     <div>
         <form  onkeydown="return event.key != 'Enter';">
             <table style="width:100%;font-size:20px" align="left">

@@ -2,7 +2,7 @@
 
 @section('MainArea')
 
-<p style="font-size:32px;font-family:Microsoft JhengHei;">資料添加作業</p>
+<p style="font-size:32px;font-family:Microsoft JhengHei;font-weight:bold;">資料添加作業</p>
 <form>
 <div class="row">
     <div class="col-md-4">
