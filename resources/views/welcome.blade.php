@@ -67,6 +67,9 @@
             });
       </script>
         <style>
+            /* input[type="radio"]{
+               -webkit-appearance: radio;
+            } */
             .dataAddLabel{
                 font-size:22px;
                 font-weight:bold;
@@ -184,7 +187,7 @@
                 /* max-width: 280px; */
             }
             input{
-                -webkit-appearance: none;
+                /* -webkit-appearance: none; */
                 /* width: 10%; */
                 border: 0;
                 font-family: inherit;

@@ -108,6 +108,15 @@
             ?>
         </form>
         <form>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultChecked" name="search_which" value="main" checked>
+                <label class="custom-control-label" for="defaultChecked">主要</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked" name="search_which" value="second">
+                <label class="custom-control-label" for="defaultUnchecked">次要</label>
+            </div>
+            <br>
             <button class="btn btn-primary" style="font-size:20px;height:60px" name="search_bool" value="1">商品明細資訊查詢</button>
             <button class="btn btn-danger" style="font-size:20px;height:60px" name="clear_bool" value="1">清除關鍵字</button>
         </form>
