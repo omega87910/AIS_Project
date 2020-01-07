@@ -2,8 +2,8 @@
 
 @section('MainArea')
 <div style="padding:0% 5% 0% 5%">
-    <p style="font-size:32px">資訊查詢</p>
-        <div style="text-align:left;font-size:20px;">
+    <p style="font-size:32px;font-family:Microsoft JhengHei;font-weight:bold;">資訊查詢</p>
+        <div style="text-align:left;font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;">
             <p>關鍵字</p>
             <form>
                 <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>

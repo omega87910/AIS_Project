@@ -5,27 +5,27 @@
     $shop_list=DB::table('shop_list')->select('shop')->get();
 ?>
 <div style="padding:0% 20% 0% 20%">
-    <p style="font-size:32px">資料匯入</p>
+    <p style="font-size:32px;font-family:Microsoft JhengHei;font-weight:bold;">資料匯入</p>
     <div class="row">
         <div class="col-md-12">
             <div class="form-group row">
-                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">Web Url:</label>
+                <label style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="col-md-2 col-form-label text-md-right">Web Url:</label>
                 <div class="col-md-10">
-                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                    <input style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="form-control" name="edit_main_keyword" value="" > 
                 </div>
             </div>
             <div class="form-group row">
-                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">主要關鍵字:</label>
+                <label style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="col-md-2 col-form-label text-md-right">主要關鍵字:</label>
                 <div class="col-md-4">
-                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                    <input style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="form-control" name="edit_main_keyword" value="" > 
                 </div>
-                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">次要關鍵字:</label>
+                <label style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="col-md-2 col-form-label text-md-right">次要關鍵字:</label>
                 <div class="col-md-4">
-                    <input style="font-size:20px" class="form-control" name="edit_main_keyword" value="" > 
+                    <input style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="form-control" name="edit_main_keyword" value="" > 
                 </div>
             </div>
             <div class="form-group row">
-                <label style="font-size:20px" class="col-md-2 col-form-label text-md-right">商家選項:</label>
+                <label style="font-size:20px;font-family:Microsoft JhengHei;font-weight:bold;" class="col-md-2 col-form-label text-md-right">商家選項:</label>
                 <div class="col-md-10">
                 <select style="width:100%;font-size:20px">
                     @foreach ($shop_list as $shop)

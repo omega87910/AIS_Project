@@ -123,6 +123,7 @@
                 color:#bfffff;
                 font-size: 64px;
                 background-color:#13aeab;
+                font-family:Microsoft JhengHei;
             }
             .navTop > a {
                 color:#bfffff;
@@ -133,6 +134,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                font-family:Microsoft JhengHei;
             }
             .links > a {
                 color: white;

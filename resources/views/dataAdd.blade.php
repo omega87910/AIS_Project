@@ -2,7 +2,7 @@
 
 @section('MainArea')
 
-<p style="font-size:32px">資料添加作業</p>
+<p style="font-size:32px;font-family:Microsoft JhengHei;">資料添加作業</p>
 <form>
 <div class="row">
     <div class="col-md-4">
@@ -92,7 +92,7 @@
 </form>
 <div class="row" style="padding:0px 10px">
     <div class="col-md-12">
-    <div style="text-align:left;font-size:20px;font-weight: bold;">
+    <div style="text-align:left;font-size:20px;font-weight:bold;font-family:Microsoft JhengHei;">
         <p>關鍵字</p>
         <form>
             <input name="keyword_input" style="width:100%" type="text" id="keyword_input" value="" required>
