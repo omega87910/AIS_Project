@@ -56,13 +56,21 @@
         for($i=0;$i<count($label_array);$i++){
             $color_array[] = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
         }
-        
+        // $chart->options([
+        //     'scales' => [
+        //         'xAxes' => [
+        //             'ticks' => [
+        //                 'fontSize' => 100,
+        //             ]
+        //         ]
+        //      ]
+        //  ]);
         $chart->labels(array_keys($label_array));//商品種類陣列
         $chart->dataset('price', 'bar', $avg_array)->backgroundColor($color_array);//商品價格陣列
     ?>
     <div>
         {!! $chart->container() !!}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
         {!! $chart->script() !!}
     </div>
 </div>
